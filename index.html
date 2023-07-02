@@ -1,0 +1,70 @@
+<html>
+ <head>
+  <title>Web Speech Synthesis Demo</title>
+  <link rel="stylesheet" href="index.css" />
+ </head>
+ <body>
+  <div id="page-wrapper">
+   <h1>Web Speech Synthesis Demo</h1>
+   <p id="msg"></p>
+   <input
+    type="text"
+    name="speech-msg"
+    id="speech-msg"
+    x-webkit-speech
+    value="<speak><p><s>Put some <emphasis strength='strong'>extra weight on these words</emphasis></s><s>And say <prosody pitch='high' rate='fast'>this a bit higher and faster</prosody>!</s></p><small>Here is a tip!</small></speak>"
+   />
+   <div class="option">
+    <label for="voice">Voice</label>
+    <select name="voice" id="voice"></select>
+   </div>
+   <div class="option">
+    <label for="volume">Volume</label>
+    <input
+     type="range"
+     min="0"
+     max="1"
+     step="0.1"
+     name="volume"
+     id="volume"
+     value="1"
+    />
+   </div>
+   <div class="option">
+    <label for="rate">Rate</label>
+    <input
+     type="range"
+     min="0.1"
+     max="10"
+     step="0.1"
+     name="rate"
+     id="rate"
+     value="1"
+    />
+   </div>
+   <div class="option">
+    <label for="pitch">Pitch</label>
+    <input
+     type="range"
+     min="0"
+     max="2"
+     step="0.1"
+     name="pitch"
+     id="pitch"
+     value="1"
+    />
+   </div>
+   <button id="speak">Speak</button>
+  </div>
+  <div id="page-credits">
+   <p>
+    Code source available on
+    <a href="https://codepen.io/matt-west/pen/DpmMgE" target="_blank"
+     >CodePen</a
+    >
+    by <a href="https://codepen.io/matt-west" target="_blank">Matt West</a>.
+   </p>
+  </div>
+  <script src="index.js"></script>
+ </body>
+</html>
